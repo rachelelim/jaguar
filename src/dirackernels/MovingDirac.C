@@ -34,7 +34,7 @@ MovingDirac::addPoints()
 {
   // Add a point from the input file
   float locationX = 0.0 + _t;
-  Point custom_point(locationX, 0.25, 0);
+  Point custom_point(locationX, 0.1, 0.05);
   addPoint(custom_point);
 }
 

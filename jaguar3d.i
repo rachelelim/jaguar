@@ -1,11 +1,12 @@
 [Mesh]
   type = GeneratedMesh
-  dim = 2
-  nx = 100
+  dim = 3
+  nx = 250
   ny = 25
+  nz = 25
   xmax = 1 # Length of test block
-  ymax = 0.25 # Width of test block
-
+  ymax = 0.1 # Width of test block
+  zmax = 0.1 # Thickness of test block
 []
 
 [Variables]
@@ -81,13 +82,13 @@
 
 [Problem]
   type = FEProblem
-  coord_type = RZ
-  rz_coord_axis = X
+#  coord_type = RZ
+#  rz_coord_axis = X
 []
 
 [Executioner]
   type = Transient
-  num_steps = 100
+  num_steps = 200
   end_time = 1
   solve_type = 'PJFNK'
   petsc_options_iname = '-pc_type -pc_hypre_type'
