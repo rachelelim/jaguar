@@ -12,35 +12,29 @@
 /*            See COPYRIGHT for full restrictions               */
 /****************************************************************/
 
-#include "MovingDirac.h"
+#ifndef MOVINGDIRAC2D_H
+#define MOVINGDIRAC2D_H
+
+// Moose Includes
+#include "DiracKernel.h"
+
+// Forward Declarations
+class MovingDirac2d;
 
 template <>
-InputParameters
-validParams<MovingDirac>()
-{
-  InputParameters params = validParams<DiracKernel>();
-  params.addRequiredParam<Real>("value", "The value of the point source");
-  params.addRequiredParam<Point>("point", "The x,y,z coordinates of the point");
-  return params;
-}
+InputParameters validParams<MovingDirac2d>();
 
-MovingDirac::MovingDirac(const InputParameters & parameters)
-  : DiracKernel(parameters), _value(getParam<Real>("value")), _point(getParam<Point>("point"))
+class MovingDirac2d : public DiracKernel
 {
-}
+public:
+  MovingDirac2d(const InputParameters & parameters);
 
-void
-MovingDirac::addPoints()
-{
-  // Add a point from the input file
-  float locationX = 0.0 + 1000 * _t;
-  Point custom_point(locationX, 1, 0.5);
-  addPoint(custom_point);
-}
+  virtual void addPoints() override;
+  virtual Real computeQpResidual() override;
 
-Real
-MovingDirac::computeQpResidual()
-{
-  // This is negative because it's a forcing function that has been brought over to the left side
-  return -_test[_i][_qp] * _value;
-}
+protected:
+  Real _value;
+  Point _point;
+};
+
+#endif // MOVINGDIRAC2D_H

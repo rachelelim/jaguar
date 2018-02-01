@@ -12,11 +12,11 @@
 /*            See COPYRIGHT for full restrictions               */
 /****************************************************************/
 
-#include "MovingDirac.h"
+#include "MovingDirac2d.h"
 
 template <>
 InputParameters
-validParams<MovingDirac>()
+validParams<MovingDirac2d>()
 {
   InputParameters params = validParams<DiracKernel>();
   params.addRequiredParam<Real>("value", "The value of the point source");
@@ -24,22 +24,22 @@ validParams<MovingDirac>()
   return params;
 }
 
-MovingDirac::MovingDirac(const InputParameters & parameters)
+MovingDirac2d::MovingDirac2d(const InputParameters & parameters)
   : DiracKernel(parameters), _value(getParam<Real>("value")), _point(getParam<Point>("point"))
 {
 }
 
 void
-MovingDirac::addPoints()
+MovingDirac2d::addPoints()
 {
   // Add a point from the input file
-  float locationX = 0.0 + 1000 * _t;
-  Point custom_point(locationX, 1, 0.5);
+  float locationX = 0.0 + _t;
+  Point custom_point(locationX, 0.001, 0);
   addPoint(custom_point);
 }
 
 Real
-MovingDirac::computeQpResidual()
+MovingDirac2d::computeQpResidual()
 {
   // This is negative because it's a forcing function that has been brought over to the left side
   return -_test[_i][_qp] * _value;

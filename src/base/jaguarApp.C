@@ -5,6 +5,7 @@
 #include "MooseSyntax.h"
 
 #include "MovingDirac.h" //Custom DiracKernel of moving heat source (DW)
+#include "MovingDirac2d.h" //Custom DiracKernel of 2d moving heat source (DW)
 
 template <>
 InputParameters
@@ -54,6 +55,7 @@ void
 jaguarApp::registerObjects(Factory & factory)
 {
   registerDiracKernel(MovingDirac); // <- registration (DW)
+  registerDiracKernel(MovingDirac2d); // <- registration (DW)
 }
 
 void
