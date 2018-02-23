@@ -33,9 +33,36 @@ void
 MovingDirac2d::addPoints()
 {
   // Add a point from the input file
-  float locationX = 0.0 + _t;
-  Point custom_point(locationX, 0.001, 0);
+  if ( _t <= 4 )
+  {
+  float locationX = _t + 0.0;
+  float locationY = 0.2;
+  Point custom_point(locationX, locationY, 0);
   addPoint(custom_point);
+  }
+  else
+  if ( _t > 4 && _t <= 8 )
+  {
+  float locationX = _t - 4.0;
+  float locationY = 0.45;
+  Point custom_point(locationX, locationY, 0);
+  addPoint(custom_point);
+  }
+  else
+  if ( _t > 8 && _t <= 12 )
+  {
+  float locationX = _t - 8.0;
+  float locationY = 0.7;
+  Point custom_point(locationX, locationY, 0);
+  addPoint(custom_point);
+  }
+  else
+  {
+  float locationX = _t - 12.0;
+  float locationY = 0.95;
+  Point custom_point(locationX, locationY, 0);
+  addPoint(custom_point);
+  }
 }
 
 Real
