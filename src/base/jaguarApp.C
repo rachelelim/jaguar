@@ -6,7 +6,8 @@
 
 #include "MovingDirac.h" //Custom DiracKernel of moving heat source (DW)
 #include "MovingDirac2d.h" //Custom DiracKernel of 2d moving heat source (DW)
-
+#include "MovingDirac3d.h" //Custom DiracKernel of 3d moving heat source (DW)
+#include "MovingDirac3dSingleBead.h" //Custom DiracKernel of 3d single bead moving heat source (DW)
 template <>
 InputParameters
 validParams<jaguarApp>()
@@ -56,6 +57,8 @@ jaguarApp::registerObjects(Factory & factory)
 {
   registerDiracKernel(MovingDirac); // <- registration (DW)
   registerDiracKernel(MovingDirac2d); // <- registration (DW)
+  registerDiracKernel(MovingDirac3d); // <- registration (DW)
+  registerDiracKernel(MovingDirac3dSingleBead); // <- registration (DW)
 }
 
 void

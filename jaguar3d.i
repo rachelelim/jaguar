@@ -1,39 +1,18 @@
 [Mesh]
   type = GeneratedMesh
   dim = 3
-  nx = 400
-  ny = 100
-  nz = 100
-  xmax = 4 # Length of test block
-  ymax = 1 # Width of test block
-  zmax = 1 # Thickness of test block
+  nx = 800
+  ny = 60
+  nz = 30
+  xmax = 8 # Length of test block
+  ymax = 0.6 # Width of test block
+  zmax = 0.3 # Thickness of test block
 []
 
 [Variables]
   [./temperature]
-    initial_condition = 296 # Initial temperature
+    initial_condition = 346 # Initial temperature
   [../]
-[]
-
-[Functions]
- # [./location_x]
- #   type = ParsedFunction
- #   value = '0.0 + t'
- #   # vars = 'alpha'
- #   # vals = '0.05'
- # [../]
- # [./location_y]
- #   type = ParsedFunction
- #   value = '0.25'
- #   # vars = 'alpha'
- #   # vals = '0.05'
- # [../]
- # [./location_z]
- #   type = ParsedFunction
- #   value = '0.0'
- #   # vars = 'alpha'
- #   # vals = '0.05'
- # [../]
 []
 
 [Kernels]
@@ -49,26 +28,19 @@
 
 [DiracKernels]
   [./point_heat_source]
-    type = MovingDirac
+    type = MovingDirac3dSingleBead
     variable = temperature
-    value = 3560
-    point = '0 0 0'
+    value = 150
+    point = '0 0.3 0.295'
   [../]
 []
 
 [BCs]
-#  [./inlet_temperature]
-#    type = DirichletBC
-#    variable = temperature
-#    boundary = top
-#    value = 600 # (K)
-#    function = heatsource_func
-#  [../]
   [./outlet_temperature]
     type = DirichletBC
     variable = temperature
     boundary = bottom
-    value = 296 # (K)
+    value = 346 # (K)
   [../]
 []
 
@@ -76,7 +48,7 @@
   [./Ti64]
     type = GenericConstantMaterial
     prop_names = 'thermal_conductivity specific_heat density'
-    prop_values = '0.0067 0.526 0.00443' # W/mm*K, J/g-K, g/mm^3 @ 296K
+    prop_values = '0.0067 0.526 0.0043' # W/mm*K, J/g-K, g/mm^3 @ 296K
   [../]
 []
 
@@ -88,11 +60,10 @@
 
 [Executioner]
   type = Transient
-#  nl_rel_tol = 1e-08
-#  nl_abs_tol = 1e-15
-#  l_tol = 1e-05
-  num_steps = 20
-  end_time = 0.004
+  nl_rel_tol = 1e-10
+  l_tol = 1e-08
+  num_steps = 200
+  end_time = 0.008
   solve_type = 'PJFNK'
   petsc_options_iname = '-pc_type -pc_hypre_type'
   petsc_options_value = 'hypre boomeramg'

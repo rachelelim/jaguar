@@ -21,6 +21,7 @@
     paired_block = layer_4
     new_boundary = layer_3_top
   [../]
+  # Define ID for subdomain
   # [./layer_1_id]
   #   type = AssignSubdomainID
   #   subdomain_id = 11
@@ -46,8 +47,29 @@
   [../]
 []
 
+[Functions]
+# Assign different thermal conductivity along time to materials in different layers
+  [./material_layer2]
+    type = ParsedFunction
+    value = 'if(t>4,6.7,0.0)'
+  [../]
+  [./material_layer3]
+    type = ParsedFunction
+    value = 'if(t>8,6.7,0.0)'
+  [../]
+  [./material_layer4]
+    type = ParsedFunction
+    value = 'if(t>12,6.7,0.0)'
+  [../]
+# Parsed function determines the position of heat point_heat_source
+  # [./heatsource_layer1]
+  #   type = ParsedFunction
+  #   value = 'if(x=t&y=0.2,400,0)'
+  # [../]
+[]
+
 [Kernels]
-  [./heat_conduction]
+  [./heat_conduction_layer1]
     type = HeatConduction
     # diffusion_coefficient = 6.7 # Thermal conductivity W/m*K * 1e3
     variable = temperature
@@ -58,23 +80,31 @@
     # specific_heat = 526 # J/g-K * 1e3
     variable = temperature
   [../]
+  # [./heatsource]
+  #   type = HeatSource
+  #   block = layer_1
+  #   variable = temperature
+  #   function = heatsource_layer1
+  # [../]
 []
 
 [DiracKernels]
-  [./point_heat_source]
-    type = MovingDirac2d
-#    type = ConstantPointSource
-    variable = temperature
-    value = 1900
-    point = '0 0 0'
-  [../]
+ [./point_heat_source]
+   type = MovingDirac2d
+   variable = temperature
+   value = 200
+   point = '0 0 0'
+ [../]
 []
-
-# [InterfaceKernels]
-#   [./layer1]
-#     type =
-#   [../]
-# []
+ # Interface kernel for potential use of heat source
+ # [InterfaceKernels]
+ #   [./interface_layer1]
+ #     type = InterfaceDiffusion
+ #     variable = temperature1
+ #     neighbor_var = temperature2
+ #     boundary = layer_1_top
+ #   [../]
+ # []
 
 [BCs]
   [./outlet_temperature]
@@ -83,55 +113,61 @@
     boundary = bottom_outlet
     value = 296 # (K)
   [../]
+#  [./middle]
+#   type = MatchedValueBC
+#   variable = temperature1
+#   boundary = 'layer_1_top'
+#   temperature1 = temperature2
+# [../]
   # [./layer_1_top_bc]
-  #   type = DirichletBC
+  #   type = z
   #   variable = temperature
   #   boundary = layer_1_top
-  #   value = 296
+  #   function = heatsource_layer1
   # [../]
-  # [./layer_2_top_bc]
-  #   type = DirichletBC
-  #   variable = temperature
-  #   boundary = layer_2_top
-  #   value = 296
-  # [../]
-  # [./layer_3_top_bc]
-  #   type = DirichletBC
-  #   variable = temperature
-  #   boundary = layer_3_top
-  #   value = 296
-  # [../]
- # [./heat_influx]
- #    type = NeumannBC
- #    variable = temperature
- #    boundary =
- #    value = 20
- #  [../]
+#   [./layer_2_top_bc]
+#     type = DirichletBC
+#     variable = temperature
+#     boundary = layer_2_top
+#     value = 296
+#   [../]
+#   [./layer_3_top_bc]
+#     type = DirichletBC
+#     variable = temperature
+#     boundary = layer_3_top
+#    value = 296
+#   [../]
+# [./heat_influx]
+#    type = NeumannBC
+#    variable = temperature
+#    boundary =
+#    value = 1000
+#  [../]
 []
 
-# [Controls]
+ # [Controls]
   # Disable the NeumannBC between layers
-  # [./period_0]
-  #   type = TimePeriod
-  #   disable_objects = 'BCs::layer_1_top_bc'
-  #   start_time = 4
-  #   end_time = 16
-  #   execute_on = 'initial timestep_begin'
-  # [../]
-  # [./period_1]
-  #   type = TimePeriod
-  #   disable_objects = 'BCs::layer_2_top_bc'
-  #   start_time = 8
-  #   end_time = 16
-  #   execute_on = 'initial timestep_begin'
-  # [../]
-  # [./period_2]
-  #   type = TimePeriod
-  #   disable_objects = 'BCs::layer_3_top_bc'
-  #   start_time = 12
-  #   end_time = 16
-  #   execute_on = 'initial timestep_begin'
-  # [../]
+ # [./period_0]
+ #   type = TimePeriod
+ #   disable_objects = 'BCs::middle'
+ #   start_time = 4
+ #   end_time = 16
+ #   execute_on = 'initial timestep_begin'
+ # [../]
+ #  [./period_1]
+ #    type = TimePeriod
+ #    disable_objects = 'BCs::layer_2_top_bc'
+ #    start_time = 8
+ #    end_time = 16
+ #    execute_on = 'initial timestep_begin'
+ #  [../]
+ #  [./period_2]
+ #    type = TimePeriod
+ #    disable_objects = 'BCs::layer_3_top_bc'
+ #    start_time = 12
+ #    end_time = 16
+ #    execute_on = 'initial timestep_begin'
+ #  [../]
 
   # Disable the layers
   # [./period_0]
@@ -161,20 +197,49 @@
   #   start_time = 12
   #   end_time = 16
   # [../]
-# []
+ # []
 
 [Materials]
+  # Update conductivity of materials along simulation time
+  [./Ti64_layer1]
+    type = GenericConstantMaterial
+    block = layer_1
+    prop_names = 'thermal_conductivity specific_heat density'
+    prop_values = '6.7 0.526 4430' # W/m*K * 1e3, J/kg-K * 1e3, kg/m^3 @ 296K
+  [../]
   [./Ti64_layer2_conduct]
-    type = ParsedMaterial
+    type = GenericFunctionMaterial
     block = layer_2
-    output_properties = 'thermal_conductivity'
-    function = if(t>4,6.7,0)
-    # prop_names = 'thermal_conductivity specific_heat density'
-    # prop_values = '6.7 0.526 4430' # W/m*K * 1e3, J/kg-K * 1e3, kg/m^3 @ 296K
+    prop_names = 'thermal_conductivity'
+    prop_values = material_layer2
   [../]
   [./Ti64_layer2]
     type = GenericConstantMaterial
     block = layer_2
+    prop_names = 'specific_heat density'
+    prop_values = '0.526 4430' # W/m*K * 1e3, J/kg-K * 1e3, kg/m^3 @ 296K
+  [../]
+  [./Ti64_layer3_conduct]
+    type = GenericFunctionMaterial
+    block = layer_3
+    prop_names = 'thermal_conductivity'
+    prop_values = material_layer3
+  [../]
+  [./Ti64_layer3]
+    type = GenericConstantMaterial
+    block = layer_3
+    prop_names = 'specific_heat density'
+    prop_values = '0.526 4430' # W/m*K * 1e3, J/kg-K * 1e3, kg/m^3 @ 296K
+  [../]
+  [./Ti64_layer4_conduct]
+    type = GenericFunctionMaterial
+    block = layer_4
+    prop_names = 'thermal_conductivity'
+    prop_values = material_layer4
+  [../]
+  [./Ti64_layer4]
+    type = GenericConstantMaterial
+    block = layer_4
     prop_names = 'specific_heat density'
     prop_values = '0.526 4430' # W/m*K * 1e3, J/kg-K * 1e3, kg/m^3 @ 296K
   [../]
