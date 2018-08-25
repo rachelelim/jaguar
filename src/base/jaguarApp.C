@@ -8,6 +8,11 @@
 #include "MovingDirac2d.h" //Custom DiracKernel of 2d moving heat source (DW)
 #include "MovingDirac3d.h" //Custom DiracKernel of 3d moving heat source (DW)
 #include "MovingDirac3dSingleBead.h" //Custom DiracKernel of 3d single bead moving heat source (DW)
+#include "MovingDirac3dHatch.h" //Custom DiracKernel of 3d hatch moving heat source (DW)
+#include "MovingDirac3dHatch_case1_raster.h" //Custom DiracKernel of 3d hatch moving heat source (DW) 45degree rotation raster
+#include "MovingDirac3dHatch_case1_contour.h" //Custom DiracKernel of 3d hatch moving heat source (DW) 45degree rotation contour
+#include "MovingDirac3d_overhang_a.h" //Custom DiracKernel of 3d overhang moving heat source (DW)
+#include "MovingDirac3d_multilayers.h" //Custom DiracKernel of 3d multilayers moving heat source(DW)
 template <>
 InputParameters
 validParams<jaguarApp>()
@@ -59,6 +64,11 @@ jaguarApp::registerObjects(Factory & factory)
   registerDiracKernel(MovingDirac2d); // <- registration (DW)
   registerDiracKernel(MovingDirac3d); // <- registration (DW)
   registerDiracKernel(MovingDirac3dSingleBead); // <- registration (DW)
+  registerDiracKernel(MovingDirac3dHatch); // <- registration (DW)
+  registerDiracKernel(MovingDirac3dHatch_case1_raster); // <- registration (DW)
+  registerDiracKernel(MovingDirac3dHatch_case1_contour); // <- registration (DW)
+  registerDiracKernel(MovingDirac3d_overhang_a); // <- registration (DW)
+  registerDiracKernel(MovingDirac3d_multilayers); // <- registration (DW)
 }
 
 void

@@ -1,12 +1,12 @@
 [Mesh]
   type = GeneratedMesh
   dim = 3
-  nx = 800
-  ny = 60
-  nz = 30
-  xmax = 8 # Length of test block
-  ymax = 0.6 # Width of test block
-  zmax = 0.3 # Thickness of test block
+  nx = 300
+  ny = 80
+  nz = 50
+  xmax = 3 # Length of test block
+  ymax = 0.8 # Width of test block
+  zmax = 0.5 # Thickness of test block
 []
 
 [Variables]
@@ -27,11 +27,17 @@
 []
 
 [DiracKernels]
-  [./point_heat_source]
-    type = MovingDirac3dSingleBead
+  [./point_heat_source_raster]
+    type = MovingDirac3dHatch_case1_raster
     variable = temperature
-    value = 150
-    point = '0 0.3 0.295'
+    value = 135
+    point = '0.2 0.506 0.495'
+  [../]
+  [./point_heat_source_contour]
+    type = MovingDirac3dHatch_case1_contour
+    variable = temperature
+    value = 75
+    point = '0 0 0'
   [../]
 []
 
@@ -43,6 +49,16 @@
     value = 296 # (K)
   [../]
 []
+
+[Controls]
+  [./period_0]
+  type = TimePeriod
+  disable_objects = 'DiracKernels::point_heat_source_contour'
+  start_time = 0
+  end_time = 0.00346482
+  execute_on = 'initial timestep_begin'
+  [../]
+ []
 
 [Materials]
   [./Ti64]
@@ -62,8 +78,8 @@
   type = Transient
   nl_rel_tol = 1e-10
   l_tol = 1e-08
-  num_steps = 200
-  end_time = 0.008
+  num_steps = 486
+  end_time = 0.01206642
   solve_type = 'PJFNK'
   petsc_options_iname = '-pc_type -pc_hypre_type'
   petsc_options_value = 'hypre boomeramg'

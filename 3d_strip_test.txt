@@ -1,0 +1,289 @@
+// Gmsh project created on Wed Apr 4 13:51:56 2018
+
+//Input
+boxlength = 3;
+boxwidth = 1.8;
+boxheight = 1;
+meltpoolsize = 0.2;
+//numelementL = 30;
+//numelementW = 18;
+//numelementH = 10;
+
+//Create 2D rectangular mesh
+Point(1) = {0, 0, 0, 1.0};
+Point(2) = {0, boxwidth, 0, 1.0};
+Point(3) = {0, boxwidth, boxheight, 1.0};
+Point(4) = {0, 0, boxheight, 1.0};
+
+//Create points for inclined walls on 2D surface
+Point(5) = {0, boxwidth - 3 * meltpoolsize, 0, 1.0};
+Point(6) = {0, boxwidth - 1.5 * meltpoolsize, 0, 1.0};
+//Points @ layer1 top
+Point(15) = {0, boxwidth - 3.5 * meltpoolsize, 0.5 * meltpoolsize, 1.0};
+Point(16) = {0, boxwidth - 2 * meltpoolsize, 0.5 * meltpoolsize, 1.0};
+Point(17) = {0, 0, 0.5 * meltpoolsize, 1.0};
+Point(18) = {0, boxwidth, 0.5 * meltpoolsize, 1.0};
+//Points @ layer2 top
+Point(25) = {0, boxwidth - 4 * meltpoolsize, 1 * meltpoolsize, 1.0};
+Point(26) = {0, boxwidth - 2.5 * meltpoolsize, 1 * meltpoolsize, 1.0};
+Point(27) = {0, 0, 1 * meltpoolsize, 1.0};
+Point(28) = {0, boxwidth, 1 * meltpoolsize, 1.0};
+//Points @ layer3 top
+Point(35) = {0, boxwidth - 4.5 * meltpoolsize, 1.5 * meltpoolsize, 1.0};
+Point(36) = {0, boxwidth - 3 * meltpoolsize, 1.5 * meltpoolsize, 1.0};
+Point(37) = {0, 0, 1.5 * meltpoolsize, 1.0};
+Point(38) = {0, boxwidth, 1.5 * meltpoolsize, 1.0};
+//Points @ layer4 top
+Point(45) = {0, boxwidth - 5 * meltpoolsize, 2 * meltpoolsize, 1.0};
+Point(46) = {0, boxwidth - 3.5 * meltpoolsize, 2 * meltpoolsize, 1.0};
+Point(47) = {0, 0, 2 * meltpoolsize, 1.0};
+Point(48) = {0, boxwidth, 2 * meltpoolsize, 1.0};
+//Points @ layer5 top
+Point(55) = {0, boxwidth - 5.5 * meltpoolsize, 2.5 * meltpoolsize, 1.0};
+Point(56) = {0, boxwidth - 4 * meltpoolsize, 2.5 * meltpoolsize, 1.0};
+Point(57) = {0, 0, 2.5 * meltpoolsize, 1.0};
+Point(58) = {0, boxwidth, 2.5 * meltpoolsize, 1.0};
+//Points @ layer6 top
+Point(65) = {0, boxwidth - 6 * meltpoolsize, 3 * meltpoolsize, 1.0};
+Point(66) = {0, boxwidth - 4.5 * meltpoolsize, 3 * meltpoolsize, 1.0};
+Point(67) = {0, 0, 3 * meltpoolsize, 1.0};
+Point(68) = {0, boxwidth, 3 * meltpoolsize, 1.0};
+//Points @ layer7 top
+Point(75) = {0, boxwidth - 6.5 * meltpoolsize, 3.5 * meltpoolsize, 1.0};
+Point(76) = {0, boxwidth - 5 * meltpoolsize, 3.5 * meltpoolsize, 1.0};
+Point(77) = {0, 0, 3.5 * meltpoolsize, 1.0};
+Point(78) = {0, boxwidth, 3.5 * meltpoolsize, 1.0};
+//Points @ layer8 top
+Point(85) = {0, boxwidth - 7 * meltpoolsize, 4 * meltpoolsize, 1.0};
+Point(86) = {0, boxwidth - 5.5 * meltpoolsize, 4 * meltpoolsize, 1.0};
+Point(87) = {0, 0, 4 * meltpoolsize, 1.0};
+Point(88) = {0, boxwidth, 4 * meltpoolsize, 1.0};
+//Points @ layer9 top
+Point(95) = {0, boxwidth - 7.5 * meltpoolsize, 4.5 * meltpoolsize, 1.0};
+Point(96) = {0, boxwidth - 6 * meltpoolsize, 4.5 * meltpoolsize, 1.0};
+Point(97) = {0, 0, 4.5 * meltpoolsize, 1.0};
+Point(98) = {0, boxwidth, 4.5 * meltpoolsize, 1.0};
+//Points @ layer10 top
+Point(105) = {0, boxwidth - 8 * meltpoolsize, 5 * meltpoolsize, 1.0};
+Point(106) = {0, boxwidth - 6.5 * meltpoolsize, 5 * meltpoolsize, 1.0};
+Point(107) = {0, 0, 5 * meltpoolsize, 1.0};
+Point(108) = {0, boxwidth, 5 * meltpoolsize, 1.0};
+
+//Create line for surrounding powder bed on 2D surface
+Line(1) = {1,5};
+Line(2) = {105,4};
+Line(4) = {6,2};
+Line(6) = {3,106};
+
+//Create the surrounding powder bed in 2D surface
+
+//Line Loop(11) = {1,13,23,33,43,53,63,73,83,93,103,2,3};
+//Plane Surface(11) = {11};
+//Line Loop(12) = {-4,12,22,32,42,52,62,72,82,92,102,-6,-5};
+//Plane Surface(12) = {12};
+
+//Create plane on 2D surface
+//Side plane of layer 1
+Line(11) = {5,6};
+Line(12) = {6,16};
+Line(13) = {5,15};
+Line(14) = {15,17};
+Line(15) = {16,18};
+Line(16) = {17,1};
+Line(17) = {18,2};
+Line(21) = {15,16};
+Line Loop(1) = {11,12,-21,-13};
+Line Loop(21) = {1,13,14,16};
+Line Loop(31) = {4,-17,-15,-12};
+Plane Surface(1) = {1};
+Plane Surface(21) = {21};
+Plane Surface(31) = {31};
+//Side plane of layer 2
+Line(22) = {16,26};
+Line(23) = {15,25};
+Line(24) = {25,27};
+Line(25) = {26,28};
+Line(26) = {27,17};
+Line(27) = {28,18};
+Line(31) = {25,26};
+Line Loop(2) = {21,22,-31,-23};
+Line Loop(22) = {-14,23,24,26};
+Line Loop(32) = {15,-27,-25,-22};
+Plane Surface(2) = {2};
+Plane Surface(22) = {22};
+Plane Surface(32) = {32};
+//Side plane of layer 3
+Line(32) = {26,36};
+Line(33) = {25,35};
+Line(34) = {35,37};
+Line(35) = {36,38};
+Line(36) = {37,27};
+Line(37) = {38,28};
+Line(41) = {35,36};
+Line Loop(3) = {31,32,-41,-33};
+Line Loop(23) = {-24,33,34,36};
+Line Loop(33) = {25,-37,-35,-32};
+Plane Surface(3) = {3};
+Plane Surface(23) = {23};
+Plane Surface(33) = {33};
+//Side plane of layer 4
+Line(42) = {36,46};
+Line(43) = {35,45};
+Line(44) = {45,47};
+Line(45) = {46,48};
+Line(46) = {47,37};
+Line(47) = {48,38};
+Line(51) = {45,46};
+Line Loop(4) = {41,42,-51,-43};
+Line Loop(24) = {-34,43,44,46};
+Line Loop(34) = {35,-47,-45,-42};
+Plane Surface(4) = {4};
+Plane Surface(24) = {24};
+Plane Surface(34) = {34};
+//Side plane of layer 5
+Line(52) = {46,56};
+Line(53) = {45,55};
+Line(54) = {55,57};
+Line(55) = {56,58};
+Line(56) = {57,47};
+Line(57) = {58,48};
+Line(61) = {55,56};
+Line Loop(5) = {51,52,-61,-53};
+Line Loop(25) = {-44,53,54,56};
+Line Loop(35) = {45,-57,-55,-52};
+Plane Surface(5) = {5};
+Plane Surface(25) = {25};
+Plane Surface(35) = {35};
+//Side plane of layer 6
+Line(62) = {56,66};
+Line(63) = {55,65};
+Line(64) = {65,67};
+Line(65) = {66,68};
+Line(66) = {67,57};
+Line(67) = {68,58};
+Line(71) = {65,66};
+Line Loop(6) = {61,62,-71,-63};
+Line Loop(26) = {-54,63,64,66};
+Line Loop(36) = {55,-67,-65,-62};
+Plane Surface(6) = {6};
+Plane Surface(26) = {26};
+Plane Surface(36) = {36};
+//Side plane of layer 7
+Line(72) = {66,76};
+Line(73) = {65,75};
+Line(74) = {75,77};
+Line(75) = {76,78};
+Line(76) = {77,67};
+Line(77) = {78,68};
+Line(81) = {75,76};
+Line Loop(7) = {71,72,-81,-73};
+Line Loop(27) = {-64,73,74,76};
+Line Loop(37) = {65,-77,-75,-72};
+Plane Surface(7) = {7};
+Plane Surface(27) = {27};
+Plane Surface(37) = {37};
+//Side plane of layer 8
+Line(82) = {76,86};
+Line(83) = {75,85};
+Line(84) = {85,87};
+Line(85) = {86,88};
+Line(86) = {87,77};
+Line(87) = {88,78};
+Line(91) = {85,86};
+Line Loop(8) = {81,82,-91,-83};
+Line Loop(28) = {-74,83,84,86};
+Line Loop(38) = {75,-87,-85,-82};
+Plane Surface(8) = {8};
+Plane Surface(28) = {28};
+Plane Surface(38) = {38};
+//Side plane of layer 9
+Line(92) = {86,96};
+Line(93) = {85,95};
+Line(94) = {95,97};
+Line(95) = {96,98};
+Line(96) = {97,87};
+Line(97) = {98,88};
+Line(101) = {95,96};
+Line Loop(9) = {91,92,-101,-93};
+Line Loop(29) = {-84,93,94,96};
+Line Loop(39) = {85,-97,-95,-92};
+Plane Surface(9) = {9};
+Plane Surface(29) = {29};
+Plane Surface(39) = {39};
+//Side plane of layer 10
+Line(102) = {96,106};
+Line(103) = {95,105};
+Line(104) = {105,107};
+Line(105) = {106,108};
+Line(106) = {107,97};
+Line(107) = {108,98};
+Line(111) = {105,106};
+Line Loop(10) = {101,102,-111,-103};
+Line Loop(30) = {-94,103,104,106};
+Line Loop(40) = {95,-107,-105,-102};
+Plane Surface(10) = {10};
+Plane Surface(30) = {30};
+Plane Surface(40) = {40};
+
+//Transfinite Line{1} = ;
+//Transfinite Line{11,111} = ;
+//Transfinite Line{4} = ;
+//Transfinite Line{2} = ;
+//Transfinite Line{6} = ;
+//Transfinite Line{16,26,36,46,56,66,76,86,96,106,17,27,37,47,57,67,77,87,97,107} = numelementL+1;
+//Transfinite Surface{1,2,3,4,5,6,7,8,9,10,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40};
+//Recombine Surface{1,2,3,4,5,6,7,8,9,10,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40};
+
+//Make the box by extrusion.
+newEntities[] = 
+Extrude {boxlength,0,0}
+{
+	Surface{1,2,3,4,5,6,7,8,9,10,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40};
+//	Layers{numelementL};
+	Recombine;
+};
+
+//Assign name for B.C and subdomain
+//B.C
+Physical Surface("bottom_outlet") = {1,120,560};
+//Layer 1
+Physical Volume("layer_1c") = {1};
+Physical Volume("layer_1r") = {11};
+Physical Volume("layer_1l") = {21};
+//Layer 2
+Physical Volume("layer_2c") = {2};
+Physical Volume("layer_2r") = {12};
+Physical Volume("layer_2l") = {22};
+//Layer 3
+Physical Volume("layer_3c") = {3};
+Physical Volume("layer_3r") = {13};
+Physical Volume("layer_3l") = {23};
+//Layer 4
+Physical Volume("layer_4c") = {4};
+Physical Volume("layer_4r") = {14};
+Physical Volume("layer_4l") = {24};
+//Layer 5
+Physical Volume("layer_5c") = {5};
+Physical Volume("layer_5r") = {15};
+Physical Volume("layer_5l") = {25};
+//Layer 6
+Physical Volume("layer_6c") = {6};
+Physical Volume("layer_6r") = {16};
+Physical Volume("layer_6l") = {26};
+//Layer 7
+Physical Volume("layer_7c") = {7};
+Physical Volume("layer_7r") = {17};
+Physical Volume("layer_7l") = {27};
+//Layer 8
+Physical Volume("layer_8c") = {8};
+Physical Volume("layer_8r") = {18};
+Physical Volume("layer_8l") = {28};
+//Layer 9
+Physical Volume("layer_9c") = {9};
+Physical Volume("layer_9r") = {19};
+Physical Volume("layer_9l") = {29};
+//Layer 10
+Physical Volume("layer_10c") = {10};
+Physical Volume("layer_10r") = {20};
+Physical Volume("layer_10l") = {30};
+
