@@ -1,0 +1,10 @@
+
+#include"/Users/dinowu/projects/jaguar/src/dirackernels/MovingDirac.C"
+#include"/Users/dinowu/projects/jaguar/src/dirackernels/MovingDirac2d.C"
+#include"/Users/dinowu/projects/jaguar/src/dirackernels/MovingDirac3d.C"
+#include"/Users/dinowu/projects/jaguar/src/dirackernels/MovingDirac3dHatch.C"
+#include"/Users/dinowu/projects/jaguar/src/dirackernels/MovingDirac3dHatch_case1_contour.C"
+#include"/Users/dinowu/projects/jaguar/src/dirackernels/MovingDirac3dHatch_case1_raster.C"
+#include"/Users/dinowu/projects/jaguar/src/dirackernels/MovingDirac3dSingleBead.C"
+#include"/Users/dinowu/projects/jaguar/src/dirackernels/MovingDirac3d_multilayers.C"
+#include"/Users/dinowu/projects/jaguar/src/dirackernels/MovingDirac3d_overhang_a.C"

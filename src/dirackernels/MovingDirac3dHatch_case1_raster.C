@@ -43,7 +43,7 @@ MovingDirac3dHatch_case1_raster::addPoints()
   else
   if (_t > 0.000346482  && _t <= 0.00069296) //scan 2
   {
-  float locationX = 0.412 - (_t - 0.000346482) * 1200 * cos(45 * 3.14159 / 180);
+  float locationX = 0.7 - (_t - 0.000346482) * 1200 * cos(45 * 3.14159 / 180);
   float locationY = 0.294 + (_t - 0.000346482) * 1200 * sin(45 * 3.14159 / 180);
   Point custom_point(locationX, locationY, 0.495);
   addPoint(custom_point);
@@ -59,7 +59,7 @@ MovingDirac3dHatch_case1_raster::addPoints()
   else
   if (_t > 0.00103945  && _t <= 0.00138593) //scan 4
   {
-  float locationX = 0.988 - (_t - 0.00103945) * 1200 * cos(45 * 3.14159 / 180);
+  float locationX = 1.276 - (_t - 0.00103945) * 1200 * cos(45 * 3.14159 / 180);
   float locationY = 0.294 + (_t - 0.00103945) * 1200 * sin(45 * 3.14159 / 180);
   Point custom_point(locationX, locationY, 0.495);
   addPoint(custom_point);
@@ -75,7 +75,7 @@ MovingDirac3dHatch_case1_raster::addPoints()
   else
   if (_t > 0.00173241  && _t <= 0.00207889) //scan 6
   {
-  float locationX = 1.564 - (_t - 0.00173241) * 1200 * cos(45 * 3.14159 / 180);
+  float locationX = 1.852 - (_t - 0.00173241) * 1200 * cos(45 * 3.14159 / 180);
   float locationY = 0.294 + (_t - 0.00173241) * 1200 * sin(45 * 3.14159 / 180);
   Point custom_point(locationX, locationY, 0.495);
   addPoint(custom_point);
@@ -91,7 +91,7 @@ MovingDirac3dHatch_case1_raster::addPoints()
   else
   if (_t > 0.00242537  && _t <= 0.00277186) //scan 8
   {
-  float locationX = 2.14 - (_t - 0.00242537) * 1200 * cos(45 * 3.14159 / 180);
+  float locationX = 2.428 - (_t - 0.00242537) * 1200 * cos(45 * 3.14159 / 180);
   float locationY = 0.294 + (_t - 0.00242537) * 1200 * sin(45 * 3.14159 / 180);
   Point custom_point(locationX, locationY, 0.495);
   addPoint(custom_point);
@@ -103,78 +103,6 @@ MovingDirac3dHatch_case1_raster::addPoints()
   float locationY = 0.506 - (_t - 0.00277186) * 1200 * sin(45 * 3.14159 / 180);
   Point custom_point(locationX, locationY, 0.495);
   addPoint(custom_point);
-  }
-  else
-  if (_t > 0.00311834  && _t <= 0.00346482) //scan 10
-  {
-  float locationX = 2.716 - (_t - 0.00311834) * 1200 * cos(45 * 3.14159 / 180);
-  float locationY = 0.294 + (_t - 0.00311834) * 1200 * sin(45 * 3.14159 / 180);
-  Point custom_point(locationX, locationY, 0.495);
-  addPoint(custom_point);
-  // }
-  // else
-  // if (_t > 0.00346482  && _t <= 0.00360242) //contour scan 1 offset: 0.02 mm
-  // {
-  // float locationX = 0.22;
-  // float locationY = 0.486 - _t * 1250;
-  // Point custom_point(locationX, locationY, 0.495);
-  // addPoint(custom_point);
-  // }
-  // else
-  // if (_t > 0.00360242  && _t <= 0.00558322) //contour scan 2 offset: 0.02 mm
-  // {
-  // float locationX = 0.22 + _t * 1250;
-  // float locationY = 0.314;
-  // Point custom_point(locationX, locationY, 0.495);
-  // addPoint(custom_point);
-  // }
-  // else
-  // if (_t > 0.00558322  && _t <= 0.00572082) //contour scan 3 offset: 0.02 mm
-  // {
-  // float locationX = 2.696;
-  // float locationY = 0.314 + _t * 1250;
-  // Point custom_point(locationX, locationY, 0.495);
-  // addPoint(custom_point);
-  // }
-  // else
-  // if (_t > 0.00572082  && _t <= 0.00770162) //contour scan 4 offset: 0.02 mm
-  // {
-  // float locationX = 2.696 - _t * 1250;
-  // float locationY = 0.486;
-  // Point custom_point(locationX, locationY, 0.495);
-  // addPoint(custom_point);
-  // }
-  // else
-  // if (_t > 0.00770162  && _t <= 0.00787122) //contour scan 1 offset: 0.0 mm
-  // {
-  // float locationX = 0.2;
-  // float locationY = 0.506 - _t * 1250;
-  // Point custom_point(locationX, locationY, 0.495);
-  // addPoint(custom_point);
-  // }
-  // else
-  // if (_t > 0.00787122  && _t <= 0.00988402) //contour scan 2 offset: 0.0 mm
-  // {
-  // float locationX = 0.2 + _t * 1250;
-  // float locationY = 0.294;
-  // Point custom_point(locationX, locationY, 0.495);
-  // addPoint(custom_point);
-  // }
-  // else
-  // if (_t > 0.00988402  && _t <= 0.01005362) //contour scan 3 offset: 0.0 mm
-  // {
-  // float locationX = 2.716;
-  // float locationY = 0.294 + _t * 1250;
-  // Point custom_point(locationX, locationY, 0.495);
-  // addPoint(custom_point);
-  // }
-  // else
-  // if (_t > 0.01005362  && _t <= 0.01206642) //contour scan 4 offset: 0.0 mm
-  // {
-  // float locationX = 2.716 - _t * 1250;
-  // float locationY = 0.506;
-  // Point custom_point(locationX, locationY, 0.495);
-  // addPoint(custom_point);
   }
 }
 
