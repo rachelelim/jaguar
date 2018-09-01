@@ -32,7 +32,7 @@ MovingDirac3dHatch_case1_contour::MovingDirac3dHatch_case1_contour(const InputPa
 void
 MovingDirac3dHatch_case1_contour::addPoints()
 {
-  if (_t <= 0.00346482) //Before contour scan
+  if (_t <= 0.002248564) //Before contour scan
   {
   float locationX = 0;
   float locationY = 0;
@@ -40,65 +40,65 @@ MovingDirac3dHatch_case1_contour::addPoints()
   addPoint(custom_point);
   }
   else
-  if (_t > 0.00346482  && _t <= 0.00360242) //contour scan 1 offset: 0.02 mm
+  if (_t > 0.002248564  && _t <= 0.002386164) //contour scan 1 offset: 0.02 mm
   {
   float locationX = 0.22;
-  float locationY = 0.486 - (_t - 0.00346482) * 1250;
+  float locationY = 0.486 - (_t - 0.002248564) * 1250;
   Point custom_point(locationX, locationY, 0.495);
   addPoint(custom_point);
   }
   else
-  if (_t > 0.00360242  && _t <= 0.00558322) //contour scan 2 offset: 0.02 mm
+  if (_t > 0.002386164  && _t <= 0.004366964) //contour scan 2 offset: 0.02 mm
   {
-  float locationX = 0.22 + (_t - 0.00360242) * 1250;
+  float locationX = 0.22 + (_t - 0.002386164) * 1250;
   float locationY = 0.314;
   Point custom_point(locationX, locationY, 0.495);
   addPoint(custom_point);
   }
   else
-  if (_t > 0.00558322  && _t <= 0.00572082) //contour scan 3 offset: 0.02 mm
+  if (_t > 0.004366964  && _t <= 0.004504564) //contour scan 3 offset: 0.02 mm
   {
   float locationX = 2.696;
-  float locationY = 0.314 + (_t - 0.00558322) * 1250;
+  float locationY = 0.314 + (_t - 0.004366964) * 1250;
   Point custom_point(locationX, locationY, 0.495);
   addPoint(custom_point);
   }
   else
-  if (_t > 0.00572082  && _t <= 0.00770162) //contour scan 4 offset: 0.02 mm
+  if (_t > 0.004504564  && _t <= 0.006485364) //contour scan 4 offset: 0.02 mm
   {
-  float locationX = 2.696 - (_t - 0.00572082) * 1250;
+  float locationX = 2.696 - (_t - 0.004504564) * 1250;
   float locationY = 0.486;
   Point custom_point(locationX, locationY, 0.495);
   addPoint(custom_point);
   }
   else
-  if (_t > 0.00770162  && _t <= 0.00787122) //contour scan 1 offset: 0.0 mm
+  if (_t > 0.006485364  && _t <= 0.006654964) //contour scan 1 offset: 0.0 mm
   {
   float locationX = 0.2;
-  float locationY = 0.506 - (_t - 0.00770162) * 1250;
+  float locationY = 0.506 - (_t - 0.006485364) * 1250;
   Point custom_point(locationX, locationY, 0.495);
   addPoint(custom_point);
   }
   else
-  if (_t > 0.00787122  && _t <= 0.00988402) //contour scan 2 offset: 0.0 mm
+  if (_t > 0.006654964  && _t <= 0.008667764) //contour scan 2 offset: 0.0 mm
   {
-  float locationX = 0.2 + (_t - 0.00787122) * 1250;
+  float locationX = 0.2 + (_t - 0.006654964) * 1250;
   float locationY = 0.294;
   Point custom_point(locationX, locationY, 0.495);
   addPoint(custom_point);
   }
   else
-  if (_t > 0.00988402  && _t <= 0.01005362) //contour scan 3 offset: 0.0 mm
+  if (_t > 0.008667764  && _t <= 0.008837364) //contour scan 3 offset: 0.0 mm
   {
   float locationX = 2.716;
-  float locationY = 0.294 + (_t - 0.00988402) * 1250;
+  float locationY = 0.294 + (_t - 0.008667764) * 1250;
   Point custom_point(locationX, locationY, 0.495);
   addPoint(custom_point);
   }
   else
-  if (_t > 0.01005362  && _t <= 0.01206642) //contour scan 4 offset: 0.0 mm
+  if (_t > 0.008837364  && _t <= 0.010850164) //contour scan 4 offset: 0.0 mm
   {
-  float locationX = 2.716 - (_t - 0.01005362) * 1250;
+  float locationX = 2.716 - (_t - 0.008837364) * 1250;
   float locationY = 0.506;
   Point custom_point(locationX, locationY, 0.495);
   addPoint(custom_point);

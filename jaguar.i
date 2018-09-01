@@ -34,7 +34,7 @@
 #    type = MovingDirac
     type = ConstantPointSource
     variable = temperature
-    value = 2500
+    value = 135
     point = '0.5 0.5 0'
   [../]
 []
@@ -59,7 +59,7 @@
   [./Ti64]
     type = GenericConstantMaterial
     prop_names = 'thermal_conductivity specific_heat density'
-    prop_values = '6.7 526 0.00443' # W/mm*K * 1e3, J/g-K * 1e3, g/mm^3 @ 296K
+    prop_values = '0.0067 0.526 0.0043' # W/mm*K * 1e3, J/g-K * 1e3, g/mm^3 @ 296K
   [../]
 []
 

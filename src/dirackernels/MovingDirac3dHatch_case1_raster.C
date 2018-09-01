@@ -33,7 +33,7 @@ void
 MovingDirac3dHatch_case1_raster::addPoints()
 {
   // Add a point from the input file
-  if (_t <= 0.000346482) //scan 1
+  if (_t <= 0.000249844) //scan 1
   {
   float locationX = 0.2 + _t  * 1200 * cos(45 * 3.14159 / 180);
   float locationY = 0.506 - _t * 1200 * sin(45 * 3.14159 / 180);
@@ -41,66 +41,66 @@ MovingDirac3dHatch_case1_raster::addPoints()
   addPoint(custom_point);
   }
   else
-  if (_t > 0.000346482  && _t <= 0.00069296) //scan 2
+  if (_t > 0.000249844  && _t <= 0.000499684) //scan 2
   {
-  float locationX = 0.7 - (_t - 0.000346482) * 1200 * cos(45 * 3.14159 / 180);
-  float locationY = 0.294 + (_t - 0.000346482) * 1200 * sin(45 * 3.14159 / 180);
+  float locationX = 0.7 - (_t - 0.000249844) * 1200 * cos(45 * 3.14159 / 180);
+  float locationY = 0.294 + (_t - 0.000249844) * 1200 * sin(45 * 3.14159 / 180);
   Point custom_point(locationX, locationY, 0.495);
   addPoint(custom_point);
   }
   else
-  if (_t > 0.00069296  && _t <= 0.00103945) //scan 3
+  if (_t > 0.000499684  && _t <= 0.000749524) //scan 3
   {
-  float locationX = 0.776 + (_t - 0.00069296) * 1200 * cos(45 * 3.14159 / 180);
-  float locationY = 0.506 - (_t - 0.00069296) * 1200 * sin(45 * 3.14159 / 180);
+  float locationX = 0.776 + (_t - 0.000499684) * 1200 * cos(45 * 3.14159 / 180);
+  float locationY = 0.506 - (_t - 0.000499684) * 1200 * sin(45 * 3.14159 / 180);
   Point custom_point(locationX, locationY, 0.495);
   addPoint(custom_point);
   }
   else
-  if (_t > 0.00103945  && _t <= 0.00138593) //scan 4
+  if (_t > 0.000749524  && _t <= 0.000999364) //scan 4
   {
-  float locationX = 1.276 - (_t - 0.00103945) * 1200 * cos(45 * 3.14159 / 180);
-  float locationY = 0.294 + (_t - 0.00103945) * 1200 * sin(45 * 3.14159 / 180);
+  float locationX = 1.276 - (_t - 0.000749524) * 1200 * cos(45 * 3.14159 / 180);
+  float locationY = 0.294 + (_t - 0.000749524) * 1200 * sin(45 * 3.14159 / 180);
   Point custom_point(locationX, locationY, 0.495);
   addPoint(custom_point);
   }
   else
-  if (_t > 0.00138593  && _t <= 0.00173241) //scan 5
+  if (_t > 0.000999364  && _t <= 0.001249204) //scan 5
   {
-  float locationX = 1.352 + (_t - 0.00138593) * 1200 * cos(45 * 3.14159 / 180);
-  float locationY = 0.506 - (_t - 0.00138593) * 1200 * sin(45 * 3.14159 / 180);
+  float locationX = 1.352 + (_t - 0.000999364) * 1200 * cos(45 * 3.14159 / 180);
+  float locationY = 0.506 - (_t - 0.000999364) * 1200 * sin(45 * 3.14159 / 180);
   Point custom_point(locationX, locationY, 0.495);
   addPoint(custom_point);
   }
   else
-  if (_t > 0.00173241  && _t <= 0.00207889) //scan 6
+  if (_t > 0.001249204  && _t <= 0.001499044) //scan 6
   {
-  float locationX = 1.852 - (_t - 0.00173241) * 1200 * cos(45 * 3.14159 / 180);
-  float locationY = 0.294 + (_t - 0.00173241) * 1200 * sin(45 * 3.14159 / 180);
+  float locationX = 1.852 - (_t - 0.001249204) * 1200 * cos(45 * 3.14159 / 180);
+  float locationY = 0.294 + (_t - 0.001249204) * 1200 * sin(45 * 3.14159 / 180);
   Point custom_point(locationX, locationY, 0.495);
   addPoint(custom_point);
   }
   else
-  if (_t > 0.00207889  && _t <= 0.00242537) //scan 7
+  if (_t > 0.001499044  && _t <= 0.001748884) //scan 7
   {
-  float locationX = 1.928 + (_t - 0.00207889) * 1200 * cos(45 * 3.14159 / 180);
-  float locationY = 0.506 - (_t - 0.00207889) * 1200 * sin(45 * 3.14159 / 180);
+  float locationX = 1.928 + (_t - 0.001499044) * 1200 * cos(45 * 3.14159 / 180);
+  float locationY = 0.506 - (_t - 0.001499044) * 1200 * sin(45 * 3.14159 / 180);
   Point custom_point(locationX, locationY, 0.495);
   addPoint(custom_point);
   }
   else
-  if (_t > 0.00242537  && _t <= 0.00277186) //scan 8
+  if (_t > 0.001748884  && _t <= 0.001998724) //scan 8
   {
-  float locationX = 2.428 - (_t - 0.00242537) * 1200 * cos(45 * 3.14159 / 180);
-  float locationY = 0.294 + (_t - 0.00242537) * 1200 * sin(45 * 3.14159 / 180);
+  float locationX = 2.428 - (_t - 0.001748884) * 1200 * cos(45 * 3.14159 / 180);
+  float locationY = 0.294 + (_t - 0.001748884) * 1200 * sin(45 * 3.14159 / 180);
   Point custom_point(locationX, locationY, 0.495);
   addPoint(custom_point);
   }
   else
-  if (_t > 0.00277186  && _t <= 0.00311834) //scan 9
+  if (_t > 0.001998724  && _t <= 0.002248564) //scan 9
   {
-  float locationX = 2.504 + (_t - 0.00277186) * 1200 * cos(45 * 3.14159 / 180);
-  float locationY = 0.506 - (_t - 0.00277186) * 1200 * sin(45 * 3.14159 / 180);
+  float locationX = 2.504 + (_t - 0.001998724) * 1200 * cos(45 * 3.14159 / 180);
+  float locationY = 0.506 - (_t - 0.001998724) * 1200 * sin(45 * 3.14159 / 180);
   Point custom_point(locationX, locationY, 0.495);
   addPoint(custom_point);
   }

@@ -3,7 +3,7 @@
 #ifndef JAGUAR_REVISION_H
 #define JAGUAR_REVISION_H
 
-#define JAGUAR_REVISION "git commit 8a873d3 on 2018-03-08"
-#define JAGUAR_VERSION "8a873d3"
+#define JAGUAR_REVISION "unknown"
+#define JAGUAR_VERSION ""
 
 #endif // JAGUAR_REVISION_H

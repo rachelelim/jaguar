@@ -1,22 +1,21 @@
 [Mesh]
   type = GeneratedMesh
-  dim = 3
-  nx = 300
-  ny = 80
-  nz = 50
-  xmax = 3 # Length of test block
-  ymax = 0.8 # Width of test block
-  zmax = 0.5 # Thickness of test block
+  dim = 2
+  nx = 200
+  ny = 200
+  xmax = 1 # Length of test block
+  ymax = 1 # Width of test block
 []
 
 [Variables]
   [./temperature]
     initial_condition = 296 # Initial temperature
+    scaling = 1e-1
   [../]
 []
 
 [AuxVariables]
-  [./a] #For 3d visualization purpose
+  [./a]
     initial_condition = 0
   [../]
   [./b]
@@ -36,17 +35,12 @@
 []
 
 [DiracKernels]
-  [./point_heat_source_raster]
-    type = MovingDirac3dHatch_case1_raster
+  [./point_heat_source]
+#    type = MovingDirac
+    type = ConstantPointSource
     variable = temperature
     value = 135
-    point = '0.2 0.506 0.495'
-  [../]
-  [./point_heat_source_contour]
-    type = MovingDirac3dHatch_case1_contour
-    variable = temperature
-    value = 75
-    point = '0 0 0'
+    point = '0.5 0.5 0'
   [../]
 []
 
@@ -57,7 +51,7 @@
     args = temperature
     function = 'if(temperature>=1916,1,0)'
   [../]
-  [./accumulate_phase] # Calculate the total time a cell > Tmelt
+  [./accumulate_phase]
     type = AccumulateAux
     variable = b
     accumulate_from_variable = a
@@ -69,41 +63,31 @@
   [./outlet_temperature]
     type = DirichletBC
     variable = temperature
-    boundary = 'back'
+    boundary = bottom
     value = 296 # (K)
   [../]
 []
-
-[Controls]
-  [./period_0]
-  type = TimePeriod
-  disable_objects = 'DiracKernels::point_heat_source_contour'
-  start_time = 0
-  end_time = 0.002248564
-  execute_on = 'initial timestep_begin'
-  [../]
- []
 
 [Materials]
   [./Ti64]
     type = GenericConstantMaterial
     prop_names = 'thermal_conductivity specific_heat density'
-    prop_values = '0.0067 0.526 0.0043' # W/mm*K, J/g-K, g/mm^3 @ 296K
+    prop_values = '0.0067 0.526 0.0043' # W/mm*K * 1e3, J/g-K * 1e3, g/mm^3 @ 296K
   [../]
 []
 
 [Problem]
   type = FEProblem
-#  coord_type = RZ
-#  rz_coord_axis = X
+  coord_type = RZ
+  rz_coord_axis = X
 []
 
 [Executioner]
   type = Transient
   nl_rel_tol = 1e-10
   l_tol = 1e-08
-  num_steps = 450
-  end_time = 0.013
+  num_steps = 20
+  end_time = 0.001
   solve_type = 'PJFNK'
   petsc_options_iname = '-pc_type -pc_hypre_type'
   petsc_options_value = 'hypre boomeramg'
