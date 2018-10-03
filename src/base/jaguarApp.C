@@ -11,6 +11,43 @@
 #include "MovingDirac3dHatch.h" //Custom DiracKernel of 3d hatch moving heat source (DW)
 #include "MovingDirac3dHatch_case1_raster.h" //Custom DiracKernel of 3d hatch moving heat source (DW) 45degree rotation raster
 #include "MovingDirac3dHatch_case1_contour.h" //Custom DiracKernel of 3d hatch moving heat source (DW) 45degree rotation contour
+///////////////ThinWall//////////////
+#include "MovingDirac3dHatch_IN718_500_raster.h" //Custom DiracKernel of 3d hatch moving heat source (DW) 45degree rotation raster
+#include "MovingDirac3dHatch_IN718_500_contour1.h" //Custom DiracKernel of 3d hatch moving heat source (DW) 45degree rotation contour
+#include "MovingDirac3dHatch_IN718_500_contour2.h" //Custom DiracKernel of 3d hatch moving heat source (DW) 45degree rotation contour
+#include "MovingDirac3dHatch_IN718_665_raster.h" //Custom DiracKernel of 3d hatch moving heat source (DW) 45degree rotation raster
+#include "MovingDirac3dHatch_IN718_665_contour1.h" //Custom DiracKernel of 3d hatch moving heat source (DW) 45degree rotation contour
+#include "MovingDirac3dHatch_IN718_665_contour2.h" //Custom DiracKernel of 3d hatch moving heat source (DW) 45degree rotation contour
+#include "MovingDirac3dHatch_IN718_760_raster.h" //Custom DiracKernel of 3d hatch moving heat source (DW) 45degree rotation raster
+#include "MovingDirac3dHatch_IN718_760_contour1.h" //Custom DiracKernel of 3d hatch moving heat source (DW) 45degree rotation contour
+#include "MovingDirac3dHatch_IN718_760_contour2.h" //Custom DiracKernel of 3d hatch moving heat source (DW) 45degree rotation contour
+#include "MovingDirac3dHatch_IN718_855_raster.h" //Custom DiracKernel of 3d hatch moving heat source (DW) 45degree rotation raster
+#include "MovingDirac3dHatch_IN718_855_contour1.h" //Custom DiracKernel of 3d hatch moving heat source (DW) 45degree rotation contour
+#include "MovingDirac3dHatch_IN718_855_contour2.h" //Custom DiracKernel of 3d hatch moving heat source (DW) 45degree rotation contour
+#include "MovingDirac3dHatch_AlSi10Mg_500_raster.h" //Custom DiracKernel of 3d hatch moving heat source (DW) 45degree rotation raster
+#include "MovingDirac3dHatch_AlSi10Mg_500_contour1.h" //Custom DiracKernel of 3d hatch moving heat source (DW) 45degree rotation contour
+#include "MovingDirac3dHatch_AlSi10Mg_500_contour2.h" //Custom DiracKernel of 3d hatch moving heat source (DW) 45degree rotation contour
+#include "MovingDirac3dHatch_AlSi10Mg_665_raster.h" //Custom DiracKernel of 3d hatch moving heat source (DW) 45degree rotation raster
+#include "MovingDirac3dHatch_AlSi10Mg_665_contour1.h" //Custom DiracKernel of 3d hatch moving heat source (DW) 45degree rotation contour
+#include "MovingDirac3dHatch_AlSi10Mg_665_contour2.h" //Custom DiracKernel of 3d hatch moving heat source (DW) 45degree rotation contour
+#include "MovingDirac3dHatch_AlSi10Mg_760_raster.h" //Custom DiracKernel of 3d hatch moving heat source (DW) 45degree rotation raster
+#include "MovingDirac3dHatch_AlSi10Mg_760_contour1.h" //Custom DiracKernel of 3d hatch moving heat source (DW) 45degree rotation contour
+#include "MovingDirac3dHatch_AlSi10Mg_760_contour2.h" //Custom DiracKernel of 3d hatch moving heat source (DW) 45degree rotation contour
+#include "MovingDirac3dHatch_AlSi10Mg_855_raster.h" //Custom DiracKernel of 3d hatch moving heat source (DW) 45degree rotation raster
+#include "MovingDirac3dHatch_AlSi10Mg_855_contour1.h" //Custom DiracKernel of 3d hatch moving heat source (DW) 45degree rotation contour
+#include "MovingDirac3dHatch_AlSi10Mg_855_contour2.h" //Custom DiracKernel of 3d hatch moving heat source (DW) 45degree rotation contour
+#include "MovingDirac3dHatch_AlSi10Mg_960_raster.h" //Custom DiracKernel of 3d hatch moving heat source (DW) 45degree rotation raster
+#include "MovingDirac3dHatch_AlSi10Mg_960_contour1.h" //Custom DiracKernel of 3d hatch moving heat source (DW) 45degree rotation contour
+#include "MovingDirac3dHatch_AlSi10Mg_960_contour2.h" //Custom DiracKernel of 3d hatch moving heat source (DW) 45degree rotation contour
+#include "MovingDirac3dHatch_Ti64_665_raster.h" //Custom DiracKernel of 3d hatch moving heat source (DW) 45degree rotation raster
+#include "MovingDirac3dHatch_Ti64_665_contour.h" //Custom DiracKernel of 3d hatch moving heat source (DW) 45degree rotation contour
+#include "MovingDirac3dHatch_Ti64_760_raster.h" //Custom DiracKernel of 3d hatch moving heat source (DW) 45degree rotation raster
+#include "MovingDirac3dHatch_Ti64_760_contour.h" //Custom DiracKernel of 3d hatch moving heat source (DW) 45degree rotation contour
+#include "MovingDirac3dHatch_Ti64_855_raster.h" //Custom DiracKernel of 3d hatch moving heat source (DW) 45degree rotation raster
+#include "MovingDirac3dHatch_Ti64_855_contour.h" //Custom DiracKernel of 3d hatch moving heat source (DW) 45degree rotation contour
+#include "MovingDirac3dHatch_Ti64_950_raster.h" //Custom DiracKernel of 3d hatch moving heat source (DW) 45degree rotation raster
+#include "MovingDirac3dHatch_Ti64_950_contour.h" //Custom DiracKernel of 3d hatch moving heat source (DW) 45degree rotation contour
+///////////////////////////////////
 #include "MovingDirac3d_overhang_a.h" //Custom DiracKernel of 3d overhang moving heat source (DW)
 #include "MovingDirac3d_multilayers.h" //Custom DiracKernel of 3d multilayers moving heat source(DW)
 template <>
@@ -67,6 +104,44 @@ jaguarApp::registerObjects(Factory & factory)
   registerDiracKernel(MovingDirac3dHatch); // <- registration (DW)
   registerDiracKernel(MovingDirac3dHatch_case1_raster); // <- registration (DW)
   registerDiracKernel(MovingDirac3dHatch_case1_contour); // <- registration (DW)
+  ///////////////ThinWall//////////////
+  registerDiracKernel(MovingDirac3dHatch_IN718_500_raster); // <- registration (DW)
+  registerDiracKernel(MovingDirac3dHatch_IN718_500_contour1); // <- registration (DW)
+  registerDiracKernel(MovingDirac3dHatch_IN718_500_contour2); // <- registration (DW)
+  registerDiracKernel(MovingDirac3dHatch_IN718_665_raster); // <- registration (DW)
+  registerDiracKernel(MovingDirac3dHatch_IN718_665_contour1); // <- registration (DW)
+  registerDiracKernel(MovingDirac3dHatch_IN718_665_contour2); // <- registration (DW)
+  registerDiracKernel(MovingDirac3dHatch_IN718_760_raster); // <- registration (DW)
+  registerDiracKernel(MovingDirac3dHatch_IN718_760_contour1); // <- registration (DW)
+  registerDiracKernel(MovingDirac3dHatch_IN718_760_contour2); // <- registration (DW)
+  registerDiracKernel(MovingDirac3dHatch_IN718_855_raster); // <- registration (DW)
+  registerDiracKernel(MovingDirac3dHatch_IN718_855_contour1); // <- registration (DW)
+  registerDiracKernel(MovingDirac3dHatch_IN718_855_contour2); // <- registration (DW)
+  registerDiracKernel(MovingDirac3dHatch_AlSi10Mg_500_raster); // <- registration (DW)
+  registerDiracKernel(MovingDirac3dHatch_AlSi10Mg_500_contour1); // <- registration (DW)
+  registerDiracKernel(MovingDirac3dHatch_AlSi10Mg_500_contour2); // <- registration (DW)
+  registerDiracKernel(MovingDirac3dHatch_AlSi10Mg_665_raster); // <- registration (DW)
+  registerDiracKernel(MovingDirac3dHatch_AlSi10Mg_665_contour1); // <- registration (DW)
+  registerDiracKernel(MovingDirac3dHatch_AlSi10Mg_665_contour2); // <- registration (DW)
+  registerDiracKernel(MovingDirac3dHatch_AlSi10Mg_760_raster); // <- registration (DW)
+  registerDiracKernel(MovingDirac3dHatch_AlSi10Mg_760_contour1); // <- registration (DW)
+  registerDiracKernel(MovingDirac3dHatch_AlSi10Mg_760_contour2); // <- registration (DW)
+  registerDiracKernel(MovingDirac3dHatch_AlSi10Mg_855_raster); // <- registration (DW)
+  registerDiracKernel(MovingDirac3dHatch_AlSi10Mg_855_contour1); // <- registration (DW)
+  registerDiracKernel(MovingDirac3dHatch_AlSi10Mg_855_contour2); // <- registration (DW)
+  registerDiracKernel(MovingDirac3dHatch_AlSi10Mg_960_raster); // <- registration (DW)
+  registerDiracKernel(MovingDirac3dHatch_AlSi10Mg_960_contour1); // <- registration (DW)
+  registerDiracKernel(MovingDirac3dHatch_AlSi10Mg_960_contour2); // <- registration (DW)
+  registerDiracKernel(MovingDirac3dHatch_Ti64_665_raster); // <- registration (DW)
+  registerDiracKernel(MovingDirac3dHatch_Ti64_665_contour); // <- registration (DW)
+  registerDiracKernel(MovingDirac3dHatch_Ti64_760_raster); // <- registration (DW)
+  registerDiracKernel(MovingDirac3dHatch_Ti64_760_contour); // <- registration (DW)
+  registerDiracKernel(MovingDirac3dHatch_Ti64_855_raster); // <- registration (DW)
+  registerDiracKernel(MovingDirac3dHatch_Ti64_855_contour); // <- registration (DW)
+  registerDiracKernel(MovingDirac3dHatch_Ti64_950_raster); // <- registration (DW)
+  registerDiracKernel(MovingDirac3dHatch_Ti64_950_contour); // <- registration (DW)
+  ///////////////////////////////////
+
   registerDiracKernel(MovingDirac3d_overhang_a); // <- registration (DW)
   registerDiracKernel(MovingDirac3d_multilayers); // <- registration (DW)
 }

@@ -375,6 +375,41 @@
   /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch.h \
   /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_case1_raster.h \
   /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_case1_contour.h \
+  /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_IN718_500_raster.h \
+  /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_IN718_500_contour1.h \
+  /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_IN718_500_contour2.h \
+  /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_IN718_665_raster.h \
+  /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_IN718_665_contour1.h \
+  /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_IN718_665_contour2.h \
+  /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_IN718_760_raster.h \
+  /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_IN718_760_contour1.h \
+  /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_IN718_760_contour2.h \
+  /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_IN718_855_raster.h \
+  /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_IN718_855_contour1.h \
+  /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_IN718_855_contour2.h \
+  /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_AlSi10Mg_500_raster.h \
+  /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_AlSi10Mg_500_contour1.h \
+  /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_AlSi10Mg_500_contour2.h \
+  /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_AlSi10Mg_665_raster.h \
+  /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_AlSi10Mg_665_contour1.h \
+  /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_AlSi10Mg_665_contour2.h \
+  /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_AlSi10Mg_760_raster.h \
+  /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_AlSi10Mg_760_contour1.h \
+  /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_AlSi10Mg_760_contour2.h \
+  /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_AlSi10Mg_855_raster.h \
+  /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_AlSi10Mg_855_contour1.h \
+  /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_AlSi10Mg_855_contour2.h \
+  /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_AlSi10Mg_960_raster.h \
+  /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_AlSi10Mg_960_contour1.h \
+  /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_AlSi10Mg_960_contour2.h \
+  /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_Ti64_665_raster.h \
+  /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_Ti64_665_contour.h \
+  /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_Ti64_760_raster.h \
+  /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_Ti64_760_contour.h \
+  /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_Ti64_855_raster.h \
+  /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_Ti64_855_contour.h \
+  /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_Ti64_950_raster.h \
+  /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_Ti64_950_contour.h \
   /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3d_overhang_a.h \
   /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3d_multilayers.h
 
@@ -1127,6 +1162,76 @@
 /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_case1_raster.h:
 
 /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_case1_contour.h:
+
+/Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_IN718_500_raster.h:
+
+/Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_IN718_500_contour1.h:
+
+/Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_IN718_500_contour2.h:
+
+/Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_IN718_665_raster.h:
+
+/Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_IN718_665_contour1.h:
+
+/Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_IN718_665_contour2.h:
+
+/Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_IN718_760_raster.h:
+
+/Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_IN718_760_contour1.h:
+
+/Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_IN718_760_contour2.h:
+
+/Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_IN718_855_raster.h:
+
+/Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_IN718_855_contour1.h:
+
+/Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_IN718_855_contour2.h:
+
+/Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_AlSi10Mg_500_raster.h:
+
+/Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_AlSi10Mg_500_contour1.h:
+
+/Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_AlSi10Mg_500_contour2.h:
+
+/Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_AlSi10Mg_665_raster.h:
+
+/Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_AlSi10Mg_665_contour1.h:
+
+/Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_AlSi10Mg_665_contour2.h:
+
+/Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_AlSi10Mg_760_raster.h:
+
+/Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_AlSi10Mg_760_contour1.h:
+
+/Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_AlSi10Mg_760_contour2.h:
+
+/Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_AlSi10Mg_855_raster.h:
+
+/Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_AlSi10Mg_855_contour1.h:
+
+/Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_AlSi10Mg_855_contour2.h:
+
+/Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_AlSi10Mg_960_raster.h:
+
+/Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_AlSi10Mg_960_contour1.h:
+
+/Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_AlSi10Mg_960_contour2.h:
+
+/Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_Ti64_665_raster.h:
+
+/Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_Ti64_665_contour.h:
+
+/Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_Ti64_760_raster.h:
+
+/Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_Ti64_760_contour.h:
+
+/Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_Ti64_855_raster.h:
+
+/Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_Ti64_855_contour.h:
+
+/Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_Ti64_950_raster.h:
+
+/Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_Ti64_950_contour.h:
 
 /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3d_overhang_a.h:
 
