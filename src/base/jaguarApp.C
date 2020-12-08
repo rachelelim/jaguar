@@ -50,6 +50,18 @@
 ///////////////////////////////////
 #include "MovingDirac3d_overhang_a.h" //Custom DiracKernel of 3d overhang moving heat source (DW)
 #include "MovingDirac3d_multilayers.h" //Custom DiracKernel of 3d multilayers moving heat source(DW)
+#include "singlebead.h"
+#include "singlebead2.h"
+#include "singlebead3.h"
+#include "singlebead4.h"
+///////////////////dxr validation////
+#include "MovingDirac3dSingleBeaddxr300.h" //Custom DiracKernel of 3d single bead moving heat source (DW)for dxr thickness validation
+#include "MovingDirac3dSingleBeaddxr400.h" //Custom DiracKernel of 3d single bead moving heat source (DW)for dxr thickness validation
+#include "MovingDirac3dSingleBeaddxr500.h" //Custom DiracKernel of 3d single bead moving heat source (DW)for dxr thickness validation
+#include "MovingDirac3dSingleBeaddxr750.h" //Custom DiracKernel of 3d single bead moving heat source (DW)for dxr thickness validation
+#include "MovingDirac3dSingleBeaddxr1000.h" //Custom DiracKernel of 3d single bead moving heat source (DW)for dxr thickness validation
+///////////////////Hardness map paper: rotation scan multilayer////
+#include "rotation_scan_multilayer.h"
 template <>
 InputParameters
 validParams<jaguarApp>()
@@ -144,6 +156,18 @@ jaguarApp::registerObjects(Factory & factory)
 
   registerDiracKernel(MovingDirac3d_overhang_a); // <- registration (DW)
   registerDiracKernel(MovingDirac3d_multilayers); // <- registration (DW)
+  registerDiracKernel(singlebead); // <- registration (DW)
+  registerDiracKernel(singlebead2); // <- registration (DW)
+  registerDiracKernel(singlebead3); // <- registration (DW)
+  registerDiracKernel(singlebead4); // <- registration (DW)
+  //////////////////////////dxr_validation//////
+  registerDiracKernel(MovingDirac3dSingleBeaddxr300); // <- registration (DW)
+  registerDiracKernel(MovingDirac3dSingleBeaddxr400); // <- registration (DW)
+  registerDiracKernel(MovingDirac3dSingleBeaddxr500); // <- registration (DW)
+  registerDiracKernel(MovingDirac3dSingleBeaddxr750); // <- registration (DW)
+  registerDiracKernel(MovingDirac3dSingleBeaddxr1000); // <- registration (DW)
+  ///////////////////Hardness map paper: rotation scan multilayer////
+  registerDiracKernel(rotation_scan_multilayer);
 }
 
 void

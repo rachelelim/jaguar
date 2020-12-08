@@ -411,7 +411,17 @@
   /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_Ti64_950_raster.h \
   /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dHatch_Ti64_950_contour.h \
   /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3d_overhang_a.h \
-  /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3d_multilayers.h
+  /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3d_multilayers.h \
+  /Users/dinowu/projects/jaguar/build/header_symlinks/singlebead.h \
+  /Users/dinowu/projects/jaguar/build/header_symlinks/singlebead2.h \
+  /Users/dinowu/projects/jaguar/build/header_symlinks/singlebead3.h \
+  /Users/dinowu/projects/jaguar/build/header_symlinks/singlebead4.h \
+  /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dSingleBeaddxr300.h \
+  /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dSingleBeaddxr400.h \
+  /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dSingleBeaddxr500.h \
+  /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dSingleBeaddxr750.h \
+  /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dSingleBeaddxr1000.h \
+  /Users/dinowu/projects/jaguar/build/header_symlinks/rotation_scan_multilayer.h
 
 /Users/dinowu/projects/jaguar/build/header_symlinks/jaguarApp.h:
 
@@ -1236,3 +1246,23 @@
 /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3d_overhang_a.h:
 
 /Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3d_multilayers.h:
+
+/Users/dinowu/projects/jaguar/build/header_symlinks/singlebead.h:
+
+/Users/dinowu/projects/jaguar/build/header_symlinks/singlebead2.h:
+
+/Users/dinowu/projects/jaguar/build/header_symlinks/singlebead3.h:
+
+/Users/dinowu/projects/jaguar/build/header_symlinks/singlebead4.h:
+
+/Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dSingleBeaddxr300.h:
+
+/Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dSingleBeaddxr400.h:
+
+/Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dSingleBeaddxr500.h:
+
+/Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dSingleBeaddxr750.h:
+
+/Users/dinowu/projects/jaguar/build/header_symlinks/MovingDirac3dSingleBeaddxr1000.h:
+
+/Users/dinowu/projects/jaguar/build/header_symlinks/rotation_scan_multilayer.h:
